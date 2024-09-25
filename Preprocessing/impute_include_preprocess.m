@@ -18,8 +18,7 @@ load('HCP_Covariates.mat');
 %this is result of pca on previous block.  
 load('rePCA.mat')
 %done in deference to validation directions needing to be related to
-%original directions.  steve reccomended doing pca on both datablocks
-%together
+%original directions.  effectively PCA on both genetics
 load('subjectlist.mat')
 load("family_removed_subjlist.mat")
 load("family_removed_subj_validation.mat")
@@ -54,12 +53,7 @@ key4 = str2double(subjectlist);
 %key5 = refined_subject_list;
 key5 = validation_subj;
 
-%find the subjects that overlap between datasets
-%sharedvals is the actual ID they share.  indx is the index of that ID for
-%FC/SC
-
 [sharedvals,indx] = intersect(intersect(key1,key3, 'stable'),key4,'stable');
-
 
 
 %this finds the subjects not shared between indices 1:1065 in above line.
@@ -173,9 +167,7 @@ for l=1:1065
     end
 end
 
-%start including cognition, use. we will work with the full matrix first. 
-% but when you reduce, make sure you refer to trait indices not
-%FC/SC indices here.  
+%start including cognition, use. we will work with the full matrix first.   
 fin_trait=cog_measure';
 
 
@@ -196,7 +188,7 @@ dex = [1:15, 21:34, 36];
 C = C(dex, :);
 
 %fill missings with row mean of that missing value
-%wrote my own function to do it.  this is in the DIVAS folder now
+%wrote my own function to do it. 
 
 c = fillMissingValuesWithRowMean(C);
 d = fillMissingValuesWithRowMean(D);
@@ -257,7 +249,6 @@ e = E;
 %sharedvals are all of the ids that are common between keys.  but the ids
 %have different indices across different blocks, so we need to intersect
 %with each key individually
-%added on june 14 
 %blocks c and d shared the same subject list
 
 [~, indxa] = intersect(key1,sharedvals, 'stable');
@@ -279,6 +270,7 @@ d = normalized(:,indxd);
 %changed to make lossless pca
 %columns are subjects -- first are indxe (for rerotated genetics, latter 377 are validation indxe)
 %rows are loadings directions.
+%e = e(1:375, 1:375);
 e = e(1:375,376:752);
 
 %FC, SC, Cog, Use, Genetics
