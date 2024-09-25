@@ -47,14 +47,8 @@ The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`
     - `PAA.m`computes the Principal Angle Analysis discussed in Sections 3.4 and 4.3.
     - `PAA.m` repeatedly calls `mPrinAngles.m` to compute principal angles between subspaces.
     - Similar to the postprocessing scripts above, you will only need the outstruct from DIVAS stored as `out` to run `PAA.m`.
-    - Discovery and validation data sets include different human subjects.  Lines 53/54 and 273/274 (below) should reflect the data set you are using.  53/273 should be used for discovery analysis and 54/274 should be used for validation.  
-      ```
-      %key5 = refined_subject_list;
-      key5 = validation_subj;
-
-      %e = e(1:375, 1:375);
-      e = e(1:375,376:752);
-      ``` 
+    - Be sure that the subject list included as `key5` in `impute_include_preprocess.m` reflects whether you are analyzing the discovery or validation data.
+     
 
 
 
