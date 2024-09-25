@@ -9,7 +9,7 @@ This repository hosts code corresponding to the manuscript, *Multifaceted Brain 
 - MATLAB 2021b is used to run all .m files and RStudio 1.4.1103 is used for all .r files.  
 
 
-## Usage and Content
+## Content
 
 The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`, `Postprocessing`, and `Principal Angle Analysis Validation`.  
 
@@ -47,8 +47,6 @@ The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`
     - `PAA.m`computes the Principal Angle Analysis discussed in Sections 3.4 and 4.3.
     - `PAA.m` repeatedly calls `mPrinAngles.m` to computes principal angles between subspaces.
     - Similar to the postprocessing scripts above, you will only need the outstruct from DIVAS stored as `out` to run `PAA.m`.
-
-
 
 
 
