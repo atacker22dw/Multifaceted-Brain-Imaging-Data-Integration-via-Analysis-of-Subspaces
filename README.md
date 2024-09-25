@@ -39,10 +39,10 @@ The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`
       use = out.matLoadings{4}('11');
       save('use','use')
       ```
+      line 64 of `trait_barplot.r` will then read in this .mat file and begin creating the asscociated axis labels and bar chart.
+      - Note, you should have run `preprocessing_jackstraw.m` prior to `trait_barplot.r` or `invert_vectorize.m` as the results from DIVAS Jackstraw will be used in these files to determine which substance use or connectivity features are made transparent.  
       
  
-
-`Postprocessing` contains four files and two subfolders.  `decomp.m` computes the variational decomposition referrenced in Sections 3.3 and 4.1; `invert_vectorize.m` is used to produce Figures 2 and 3 and calls `plot_brain.m` which subsequently makes use of the `circularGraph` subfolder of functions.  The `DIVAS Jackstraw` folder contains a preprocessing script and a jackstraw routine script corresponding to the novel DIVAS Jackstraw method discussed in Section 3.2; and `trait_barplot.r` is necessary to produce Figure 4.  
 
 Finally, the `Principal Angle Analysis Validation` folder contains the `PAA.m` file necessary to compute the Principal Angle Analysis discussed in Sections 3.4 and 4.3.  `PAA.m` will call `mPrinAngles.m`.  
 
