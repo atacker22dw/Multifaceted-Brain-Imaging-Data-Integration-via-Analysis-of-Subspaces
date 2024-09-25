@@ -3,6 +3,12 @@ This repository hosts code corresponding to the manuscript, *Multifaceted Brain 
 
 ## Install/Setup
 
+- The data used in this study (HCP-YA) is freely and publicly available at [ConnectomeDB website](https://www.humanconnectome.org/study/hcp-young-adult/data-releases).
+- DIVAS will require an installation of a convex optimization solver, [CVX](http://cvxr.com/cvx/).
+    - SeDuMi or SDPT3 solvers are reccomended for precise replication of our results.
+ 
+
+
 
 ## Usage
 
@@ -14,7 +20,6 @@ The `DIVAS2021-main` branch is a local copy of the Data Integration via Analysis
 
 Finally, the `Principal Angle Analysis Validation` folder contains the `PAA.m` file necessary to compute the Principal Angle Analysis discussed in Sections 3.4 and 4.3.  `PAA.m` will call `mPrinAngles.m`.  
 
-The data used in this study (HCP-YA) is freely and publicly available at [ConnectomeDB website](https://www.humanconnectome.org/study/hcp-young-adult/data-releases). 
 
 
 
