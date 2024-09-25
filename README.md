@@ -29,16 +29,9 @@ The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`
 - DIVAS2021-main
     - This is a local copy of the Data Integration via Analysis of Subspaces repository, placed here to make this repository full self-contained.
     - Necessary functions can be found in the `DJIVECode` subfolder.
-    -     Main function: DJIVEMainJP(), takes in the datablocks as a cell array, a classic Steve Marron paramstruct, and an optional third argument for "true signal" for diagnostic use.  Executes three subroutines:
-
-  DJIVESignalExtractJP(), Finds signal ranks & perturbation angles for each data block. This function will attempt to initialize a parallel pool.
-  
-  DJIVEJointStrucEstimateJPLoadInfo(), Finds partially shared structure between data blocks. Runs an optimization problem implemented in CVX, which must be installed on your machine: http://cvxr.com/cvx/
-  
-  DJIVEReconstructMJ(), Solves for corresponding loadings structure to the scores structure found in the previous function. Packages relevant info into the returned "outstruct"
+          -Main function: DJIVEMainJP(), takes in the datablocks as a cell array, a classic Steve Marron paramstruct, and an optional third argument for "true signal" for diagnostic use.  Executes three subroutines:
 
   
-  ```
 
 The `DIVAS2021-main` branch is a local copy of the Data Integration via Analysis of Subspaces repository found [here](https://github.com/jbprothero/DIVAS2021).  Note, DIVAS will require an installation of a convex optimization solver, [CVX](http://cvxr.com/cvx/).  SeDuMi or SDPT3 solvers are reccomended for precise replication of our results.  The data integration routine accomplished via this `DIVAS2021-main` folder is described in Section 3.1 of the aforementioned paper.
  
