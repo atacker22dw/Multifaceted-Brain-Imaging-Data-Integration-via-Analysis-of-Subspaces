@@ -51,7 +51,7 @@ The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`
 ## Usage
 
 1. ```
-   impute_include.m \rightarrow 
+   impute_include.m $\rightarrow$
    ```
 
 
