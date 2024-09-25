@@ -23,11 +23,9 @@ The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`
     - This is a local copy of the Data Integration via Analysis of Subspaces repository found [here](https://github.com/atacker22dw/DIVAS2021), placed here to make this repository fully self-contained.
     - Necessary functions can be found in the `DJIVECode` subfolder.  `DJIVEMainJP()` is the wrapper function that calls `DJIVESignalExtractJP()`, `DJIVEJointStrucEstimateJPLoadInfo()`, and `DJIVEReconstructMJ()` corresponding to the three steps of DIVAS discussed in Section 3.1 of the aforementioned paper.
     - The outstruct of DIVAS is discussed in this [ReadMe](https://github.com/atacker22dw/DIVAS2021), but in particular
-      ```
-    matLoadings: Cell array of map data objects containing the orthonormal basis matrices for "shared" subspaces in each block's loadings space. Each array is d_i x K, where d_i is the number of traits in block i and K is that collection's shared subspace rank.
+      ```matLoadings: Cell array of map data objects containing the orthonormal basis matrices for "shared" subspaces in each block's loadings space. Each array is d_i x K, where d_i is the number of traits in block i and K is that collection's shared subspace rank.
     
-    matBlocks: Cell array of map data objects containing signal modes of variation for each included block in each block collection. Each array is d_i x n, where d_i is the number of traits in block i.
-
+    matBlocks: Cell array of map data objects containing signal modes of variation for each included block in each block collection. Each array is d_i x n, where d_i is the number of traits in block i.\
       ```
 
 
