@@ -45,7 +45,7 @@ The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`
  
 - Principal Angle Analysis Validation
     - `PAA.m`computes the Principal Angle Analysis discussed in Sections 3.4 and 4.3.
-    - `PAA.m` repeatedly calls `mPrinAngles.m` to computes principal angles between subspaces.
+    - `PAA.m` repeatedly calls `mPrinAngles.m` to compute principal angles between subspaces.
     - Similar to the postprocessing scripts above, you will only need the outstruct from DIVAS stored as `out` to run `PAA.m`.
 
 
