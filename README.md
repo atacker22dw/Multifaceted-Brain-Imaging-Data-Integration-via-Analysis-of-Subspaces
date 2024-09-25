@@ -40,11 +40,14 @@ The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`
       save('use','use')
       ```
       line 64 of `trait_barplot.r` will then read in this .mat file and begin creating the asscociated axis labels and bar chart.
-      - Note, you should have run `preprocessing_jackstraw.m` prior to `trait_barplot.r` or `invert_vectorize.m` as the results from DIVAS Jackstraw will be used in these files to determine which substance use or connectivity features are made transparent.  
+    - Note, you should have run `preprocessing_jackstraw.m` prior to `trait_barplot.r` or `invert_vectorize.m` as the results from DIVAS Jackstraw will be used in these files to determine which substance use or connectivity features are made transparent.  
       
  
+- Principal Angle Analysis Validation
+    - `PAA.m`computes the Principal Angle Analysis discussed in Sections 3.4 and 4.3.
+    - `PAA.m` repeatedly calls `mPrinAngles.m` to computes principal angles between subspaces.
+    - Similar to the postprocessing scripts above, you will only need the outstruct from DIVAS stored as `out` to run `PAA.m`.
 
-Finally, the `Principal Angle Analysis Validation` folder contains the `PAA.m` file necessary to compute the Principal Angle Analysis discussed in Sections 3.4 and 4.3.  `PAA.m` will call `mPrinAngles.m`.  
 
 
 
