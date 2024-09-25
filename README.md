@@ -6,7 +6,6 @@ This repository hosts code corresponding to the manuscript, *Multifaceted Brain 
 - The data used in this study (HCP-YA) is freely and publicly available at [ConnectomeDB website](https://www.humanconnectome.org/study/hcp-young-adult/data-releases).
 - DIVAS will require an installation of a convex optimization solver, [CVX](http://cvxr.com/cvx/).
     - SeDuMi or SDPT3 solvers are reccomended for precise replication of our results.
-    - ```cvx_setup``` should be included in any DIVAS preprocessing script if using a computing cluster (recommended)  
 - MATLAB 2021b is used to run all .m files and RStudio 1.4.1103 is used for all .r files.  
 
 
@@ -16,6 +15,10 @@ The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`
 
 - Preprocessing
     - `impute_include_preprocess.m` is the wrapper function for all preprocessing described in Section 2 of the linked manuscript.
+  ```out = DJIVEMainJP(datablock, paramstruct) ;
+    %comment out for cluster
+    %DJIVEAngleDiagnosticJP(datablock, fin_dat, out, 556, "FC,SC,Cog")
+  ```
  
 The `Preprocessing` subfolder includes four files necessary to prepare the HCP-YA data for submission to DIVAS.  These preprocessing steps are described in detail in Section 2 of the linked manuscript.  `impute_include_preprocess.m` is the wrapper function for this step of the analysis and is run on MATLAB2021b.  
 
