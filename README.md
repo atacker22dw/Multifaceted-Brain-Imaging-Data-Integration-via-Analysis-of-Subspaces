@@ -6,13 +6,18 @@ This repository hosts code corresponding to the manuscript, *Multifaceted Brain 
 - The data used in this study (HCP-YA) is freely and publicly available at [ConnectomeDB website](https://www.humanconnectome.org/study/hcp-young-adult/data-releases).
 - DIVAS will require an installation of a convex optimization solver, [CVX](http://cvxr.com/cvx/).
     - SeDuMi or SDPT3 solvers are reccomended for precise replication of our results.
- 
-
+    - ```cvx_setup``` should be included in any DIVAS preprocessing script if using a computing cluster (recommended)  
+- MATLAB 2021b is used to run all .m files and RStudio 1.4.1103 is used for all .r files.  
 
 
 ## Usage
 
-The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`, `Postprocessing`, and `Principal Angle Analysis Validation`.  The `Preprocessing` subfolder includes four files necessary to prepare the HCP-YA data for submission to DIVAS.  These preprocessing steps are described in detail in Section 2 of the linked manuscript.  `impute_include_preprocess.m` is the wrapper function for this step of the analysis and is run on MATLAB2021b.  
+The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`, `Postprocessing`, and `Principal Angle Analysis Validation`.  
+
+- Preprocessing
+    - `impute_include_preprocess.m` is the wrapper function for all preprocessing described in Section 2 of the linked manuscript.
+ 
+The `Preprocessing` subfolder includes four files necessary to prepare the HCP-YA data for submission to DIVAS.  These preprocessing steps are described in detail in Section 2 of the linked manuscript.  `impute_include_preprocess.m` is the wrapper function for this step of the analysis and is run on MATLAB2021b.  
 
 The `DIVAS2021-main` branch is a local copy of the Data Integration via Analysis of Subspaces repository found [here](https://github.com/jbprothero/DIVAS2021).  Note, DIVAS will require an installation of a convex optimization solver, [CVX](http://cvxr.com/cvx/).  SeDuMi or SDPT3 solvers are reccomended for precise replication of our results.  The data integration routine accomplished via this `DIVAS2021-main` folder is described in Section 3.1 of the aforementioned paper.  
 
