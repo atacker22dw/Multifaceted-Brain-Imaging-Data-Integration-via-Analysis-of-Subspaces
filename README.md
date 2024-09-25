@@ -3,4 +3,4 @@ This repository hosts code corresponding to the Manuscript, *Multifaceted Brain 
 
 The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`, `Postprocessing`, and `Principal Angle Analysis Validation`.  The `Preprocessing` subfolder includes four files necessary to prepare the HCP-YA data for submission to DIVAS.  These preprocessing steps are described in detail in Section 2 of the linked manuscript.  `impute_include_preprocess.m` is the wrapper function for this step of the analysis and is run on MATLAB2021b.  
 
-The `DIVAS2021-main` branch is a local copy of the Data Integration via Analysis of Subspaces repository found 
+The `DIVAS2021-main` branch is a local copy of the Data Integration via Analysis of Subspaces repository found [here](https://github.com/jbprothero/DIVAS2021).  Note, DIVAS will require an installation of a convex optimization solver, [CVX](http://cvxr.com/cvx/).  SeDuMi or SDPT3 solvers are reccomended for precise replication of our results.  The data integration routine accomplished via this `DIVAS2021-main` folder is described in Section 3.1 of the aforementioned paper.  
