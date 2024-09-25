@@ -9,4 +9,4 @@ The `DIVAS2021-main` branch is a local copy of the Data Integration via Analysis
 
 Finally, the `Principal Angle Analysis Validation` folder contains the `PAA.m` file necessary to compute the Principal Angle Analysis discussed in Sections 3.4 and 4.3.  `PAA.m` will call `mPrinAngles.m`.  
 
-The data used in this study (HCP-YA) is freely and publically available at [ConnectomeDB website](https://www.humanconnectome.org/study/hcp-young-adult/data-releases). 
+The data used in this study (HCP-YA) is freely and publicly available at [ConnectomeDB website](https://www.humanconnectome.org/study/hcp-young-adult/data-releases). 
