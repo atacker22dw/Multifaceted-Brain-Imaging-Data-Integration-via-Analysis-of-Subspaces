@@ -27,9 +27,19 @@ The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`
       out.matLoadings{1}('11')
       out.matBlocks{k}('j')
       ```
-      are used extensively in the postprocessing.  The former represents the rank 1 loadings corresponding to the FC-SC-Use partially shared space.  The latter is used in the variational decomposition discussed in Sections 3.3 and 4.1.
+      are used extensively in the postprocessing.  The former represents the rank 1 FC loadings corresponding to the FC-SC-Use partially shared space.  {1} can be changed to {2} or {4} to extract the associated SC or Use loadings.  The latter is used in the variational decomposition discussed in Sections 3.3 and 4.1.
 
-    
+- Postprocessing
+    - `decomp.m` computes the variational decomposition referrenced in Sections 3.3 and 4.1.  
+    - `invert_vectorize.m` is used to produce Figures 2 and 3 and calls `plot_brain.m` which subsequently makes use of the `circularGraph` subfolder of functions
+    - The `DIVAS Jackstraw` folder contains a preprocessing script and a jackstraw routine script corresponding to the novel DIVAS Jackstraw method discussed in Section 3.2
+    - For any of the above, you should only need stored output from the DIVAS step above to run.  
+    - `trait_barplot.r` is necessary to produce Figure 4.  To run this file, store the substance use loadings as a .mat file.  This can be accomplished via
+      ```
+      use = out.matLoadings{4}('11');
+      save('use','use')
+      ```
+      
  
 
 `Postprocessing` contains four files and two subfolders.  `decomp.m` computes the variational decomposition referrenced in Sections 3.3 and 4.1; `invert_vectorize.m` is used to produce Figures 2 and 3 and calls `plot_brain.m` which subsequently makes use of the `circularGraph` subfolder of functions.  The `DIVAS Jackstraw` folder contains a preprocessing script and a jackstraw routine script corresponding to the novel DIVAS Jackstraw method discussed in Section 3.2; and `trait_barplot.r` is necessary to produce Figure 4.  
