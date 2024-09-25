@@ -1,2 +1,2 @@
 # Multifaceted Brain Imaging Data Integration via Analysis of Subspaces
-This repository hosts code corresponding to the Manuscript, *Multifaceted Brain Imaging Data Integration via Analysis of Subspaces*.  This manuscript is currently under revision at 
+This repository hosts code corresponding to the Manuscript, *Multifaceted Brain Imaging Data Integration via Analysis of Subspaces*.  This manuscript is currently under revision for the *Integrating and Analyzing Complex High-Dimensional Data in Social and Behavioral Sciences Research* special edition of *Psychometrika*, and the preprint can be found at [arXiv](https://arxiv.org/abs/2408.16791).   
