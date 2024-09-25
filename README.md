@@ -24,9 +24,10 @@ The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`
     - Necessary functions can be found in the `DJIVECode` subfolder.  `DJIVEMainJP()` is the wrapper function that calls `DJIVESignalExtractJP()`, `DJIVEJointStrucEstimateJPLoadInfo()`, and `DJIVEReconstructMJ()` corresponding to the three steps of DIVAS discussed in Section 3.1 of the aforementioned paper.
     - The outstruct of DIVAS is discussed in this [ReadMe](https://github.com/atacker22dw/DIVAS2021), but in particular
       ```
-      out.matLoadings{1}('11') and out.matBlocks{}()
+      out.matLoadings{1}('11')
+      out.matBlocks{k}('j')
       ```
-      are used extensively in the postprocessing. 
+      are used extensively in the postprocessing.  The former represents the rank 1 loadings corresponding to the FC-SC-Use partially shared space.  The latter is used in the variational decomposition discussed in Sections 3.3 and 4.1.
 
     
  
