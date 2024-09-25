@@ -18,18 +18,18 @@ The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`
     - `re_PCA_genetics.R` computes a PCA of the genetic SNP's data.  The output of this file will be `rePCA.mat` that is read into the wrapper function.
     - `fillMissingValuesWithRowMean.m` is a function that will be called within `impute_include_preprocess.m` to perform row-mean imputation on the cognition and substance use data blocks as described in Section 2.2.
     - `checking_number_overlap.r` is a file to confirm the number of genetically related subjects shared between the discovery data set and the validation data set.  It is not required to be run to reproduce our main results.
-    - Within the wrapper function, 
-  ```
-    out = DJIVEMainJP(datablock, paramstruct) ;
-    %comment out for cluster
-    %DJIVEAngleDiagnosticJP(datablock, fin_dat, out, 556, "FC,SC,Cog")
-  ```
-  `out` will include all outstruct components listed in the Data Integration via Analysis of Subspaces repository found [here](https://github.com/jbprothero/DIVAS2021).  `DJIVEAngleDiagnosticsJP` is commented out for ease of execution in a computing cluster.  This function creates the diagnostic plots seen in Figures 1, 5, 6 of the manuscript and can be run locally. 
  
 - DIVAS2021-main
-    - This is a local copy of the Data Integration via Analysis of Subspaces repository, placed here to make this repository full self-contained.
+    - This is a local copy of the Data Integration via Analysis of Subspaces repository found [here](https://github.com/atacker22dw/DIVAS2021), placed here to make this repository fully self-contained.
     - Necessary functions can be found in the `DJIVECode` subfolder.  `DJIVEMainJP()` is the wrapper function that calls `DJIVESignalExtractJP()`, `DJIVEJointStrucEstimateJPLoadInfo()`, and `DJIVEReconstructMJ()` corresponding to the three steps of DIVAS discussed in Section 3.1 of the aforementioned paper.
-    - In particular, ```out.matLoadings{1}('11')``` represent the loadings corresponding to the rank 1 FC-SC-Use partially shared space repeatedly used in the postprocessing.  
+    - The outstruct of DIVAS is discussed in this [ReadMe](https://github.com/atacker22dw/DIVAS2021), but in particular
+      ```
+    matLoadings: Cell array of map data objects containing the orthonormal basis matrices for "shared" subspaces in each block's loadings space. Each array is d_i x K, where d_i is the number of traits in block i and K is that collection's shared subspace rank.
+    
+    matBlocks: Cell array of map data objects containing signal modes of variation for each included block in each block collection. Each array is d_i x n, where d_i is the number of traits in block i.
+
+      ```
+
 
  
 
