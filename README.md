@@ -25,7 +25,8 @@ The main branch consists of four subfolders -- `Preprocessing`, `DIVAS2021-main`
     - The outstruct of DIVAS is discussed in this [ReadMe](https://github.com/atacker22dw/DIVAS2021), but in particular
       ```
       out.matLoadings{1}('11') and out.matBlocks{}()
-      ``` are used extensively in the postprocessing. 
+      ```
+      are used extensively in the postprocessing. 
 
     
  
