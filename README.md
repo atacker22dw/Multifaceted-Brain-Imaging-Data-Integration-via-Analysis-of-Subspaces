@@ -11,6 +11,3 @@ Finally, the `Principal Angle Analysis Validation` folder contains the `PAA.m` f
 
 The data used in this study (HCP-YA) is freely and publicly available at [ConnectomeDB website](https://www.humanconnectome.org/study/hcp-young-adult/data-releases). 
 
-usage:
-
- new
